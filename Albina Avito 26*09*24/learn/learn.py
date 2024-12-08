@@ -50,10 +50,10 @@ print(data.isnull().sum())
 
 # Заполним пропущенные значения (например, пользователь может выбрать подходящий способ обработки)
 # В данном случае мы просто удалим строки с NaN
-data = data.dropna(subset=['director', 'writer', 'star', 'budget', 'score'])
+data = data.dropna(subset=['rating', 'votes', 'gross'])
 
 # Теперь выберем необходимые характеристики и целевую переменную
-features = data[['director', 'writer', 'star', 'budget']]
+features = data[['rating', 'votes', 'gross']]
 target = data['score']
 
 # Кодирование категориальных переменных
